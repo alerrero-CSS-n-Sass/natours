@@ -48,14 +48,16 @@ body {
 
 .text-box {
     position: absolute;
-    top:40%;                /*centrando vertical y horizontalmente*/
-    left: 50%;              /**/
-    transform: translate(-50%, -50%)
+    top:40%;                /*centrando vertical*/
+    left: 50%;              /*centrando horizontal*/
+    transform: translate(-50%, -50%);    /*Cambiando coordenadas iniciales*/
+    text-align: center;
 }
 
 .heading-primary {
     color: #fff;
     text-transform: uppercase;
+    margin-bottom: 50px;
 }
 
 .heading-primary-main {
@@ -65,7 +67,7 @@ body {
     letter-spacing: 35px;
 
     animation-name: moveInLeft;
-    animation-duration: 1000ms;
+    animation-duration: 800ms;
     animation-timing-function: ease-out;
 
     /*Propiedades extra:
@@ -110,4 +112,29 @@ body {
         opacity: 1;
         transform: translate(0);
     }
+}
+
+.btn:link,
+.btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all 200ms;
+}
+
+.btn-white {
+    background-color: #fff;
+    color: #777;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .2);
+}
+
+.btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
 }
